@@ -1,0 +1,493 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1;	font-family: Arial, Helvetica, sans-serif;color:white;}
+h1 {font-size: 1.5em;margin-bottom: 10px;}
+p{font-size: 15px;line-height: 1.3em;margin-bottom: 10px;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: transparent;
+}
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+  #appsHtxt {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 12px 0px;
+}
+
+#main {
+    transition: 0.5s;
+}
+
+desktop {
+	font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: url("https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=en-CA");
+    background-size: cover !important;
+	overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.2s;
+}
+#time { 
+    position: absolute;           
+    top: 6px;
+    right: 2px;
+    color: white;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    text-align: right;
+    font-size: 15px;
+    opacity: 0.001;
+    transition: 0.2s;
+}
+#time:hover{
+    opacity: 1;
+}
+
+#appsmenu {
+    position: fixed;
+   margin: unset !important;
+   height: 100%;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    z-index: 9999999999;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+    background-color: #2c2c2cad;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0px;
+    -webkit-box-shadow: 0px 0px 15px 0px #000000; 
+    box-shadow: 0px 0px 15px 0px #000000;
+}
+
+#appsmenu.opened {
+    width: 100% !important;
+}
+
+
+
+#appicons {
+    left: 5px;
+    height: 80%;
+}
+#appicons a {
+    margin: 1px 0;
+    display: inline-table;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+    background: #00000040;
+    border-radius: 0px;
+}
+#appicons a:hover {
+    
+    background: #00000024;
+    color: #FFF;
+    border-radius: 0px;
+
+}
+#appicons a img {
+    border:0; 
+    vertical-align:middle; 
+    margin:0 5px 0 0;
+}
+#appicons a br {
+    display: none;
+}
+
+
+
+#abranding {
+        display: inline-flex;
+       align-items:center;
+       font-size: 1.6em;
+       font-weight: bold; 
+}
+
+.tab {
+    padding: 10px;
+}
+#tabsettings {
+    padding: 10px 10px;
+}
+
+
+.context-menu {
+    position: absolute;
+    text-align: center;
+    background: #303030bf;
+    border: 3px solid #00000040;
+    /* backdrop-filter: blur(6px); */
+    -webkit-backdrop-filter: blur(6px);
+    /* -webkit-box-shadow: 0px 0px 15px 0px #000000; */
+    /* box-shadow: 0px 0px 15px 0px #000000; */
+    border-radius: 0px;
+}
+
+.context-menu ul {
+    padding: 0px;
+    margin: 0px;
+    min-width: 150px;
+    list-style: none;
+}
+
+.context-menu ul li {
+    border-radius: 0px;
+    background: #00000040;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border: 1px solid transparent;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.context-menu ul li:hover {
+    background: #00000024;
+    border: 1px solid white;
+}
+.bottomBtns {
+	position: absolute;
+	bottom: 2px;
+	right: 15px;
+}
+.bottomBtns a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: transparent;
+}
+.btmbtninvert {
+    filter: invert(1);
+}
+#startup {
+    position: fixed;
+    display: block; 
+    background:black;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+}
+.startuplogo {
+    position: absolute;
+    top: 25%;
+    width: 99%;
+    text-align: center;
+    font-size: 18px;
+  }
+.startupload {
+    position: absolute;
+    top: 75%;
+    width: 99%;
+    text-align: center;
+    font-size: 18px;
+  }
+  button {
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 1px 4px;
+    background: #CCC;
+    font-weight: bold;
+    cursor: pointer;
+    height: 30px;
+    margin: -5px 0px;
+  }
+
+
+.window {
+    position: absolute;
+    border: 2px solid #000;
+    background: #0000007a;
+    border-radius: 5px;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+.window.closed {
+	display: none;
+}
+.window.minimizedWindow {
+	display: none;
+}
+.window.fullSizeWindow {
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    border-radius: 0;
+    bottom: 32px !important;
+    border: none !important;
+}
+.fullSizeWindow .ui-resizable-handle {
+	display: none;
+}
+.fullSizeWindow {
+    display: block;
+      border: 2px solid transparent;
+      border-radius: 0px;
+      position: fixed;
+      left: 0px !important;
+      top: 0px !important;
+      height: 100% !important;
+      width: 100% !important;
+}
+
+.windowHeader {
+    background-color: transparent;
+    text-align: right;
+    border-bottom: 2px solid transparent;
+    padding: 2px;
+    cursor: move;
+    height: 28px;
+}
+.activeWindow .windowHeader {
+    background-color: transparent;
+}
+.windowHeader > span {
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-left: 4px;
+    font-size: 19px;
+    padding: 2px 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    border-radius: 5px;
+    line-height: 20px;
+    width: 12px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.windowHeader > span:hover {
+	background: rgba(255,255,255,0.3);
+}
+
+.windowHeader > span > span {
+    display: inline-block;
+    height: 8px;
+    width: 10px;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+.winminimize > span {
+	border-bottom: 3px solid white;
+}
+.winmaximize > span {
+	border: 2px solid white;
+	border-top: 3px solid white;
+}
+.winmaximize > span:nth-child(2) {
+	display: none;
+}
+.fullSizeWindow .winmaximize > span:nth-child(1) {
+	margin: 2px 0 0 -4px;
+}
+.fullSizeWindow .winmaximize > span:nth-child(2) {
+    display: inline-block;
+    top: 3px;
+    left: 12px;
+}
+.wincontent {
+    padding: 0px;
+    min-width: 200px;
+    min-height: 140px;
+    border: 2px solid transparent;
+    margin: 2px;
+    border-radius: 0 0 5px 5px;
+}
+.windowHeader > strong {
+    float: left;
+    margin: 0px 3px 0 10px;
+    line-height: 29px;
+    font-size: 17px;
+    color: white;
+}
+.taskbarPanel {
+    display: inline-block;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    line-height: 12px;
+    font-size: 15px;
+    margin: 1px 4px;
+    background: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 1px;    
+    transform: scale(1.14);
+}
+.appsPanel {
+    display: inline-block;
+    border: transparent;
+    border-radius: 4px;
+    position: relative;
+    font-size: 15px;
+    padding: 0px 5px;
+    background: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(1.12);
+    height: 0px;
+    z-index: 10;
+    transition: 0.5s;
+    opacity: 0.001;
+}
+.appsPanel:hover{
+    opacity: 1;
+}
+.appsPanel img {
+    transition: 0.5s;
+    margin:0px 0px;
+}
+.appsPanel img:hover {
+background: rgba(0, 0, 0, 0.5);
+transition: 0.5s;
+opacity: 1;
+
+}
+.taskbarPanel:hover{
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    color: #FFF;
+}
+.taskbarPanel.activeTab {
+    background-color: #2e2e2e;
+}
+.taskbarPanel.activeTab:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+.taskbarPanel.minimizedTab {
+    transition: 0.5s;
+}
+
+.taskbarPanel.closed {
+	display: none;
+}
+#taskbar {
+	position: absolute;
+	height: 32px;
+	border-top: 2px solid transparent;
+	bottom: 0;
+	left: 0;
+    z-index: 10;
+	right: 0;
+	background: #00000085;
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+    opacity: 0.001;
+    transition: 0.2s;
+}
+#taskbar:hover {
+    opacity: 1;
+}
+
+#icons {
+	position: absolute;
+	z-index: 1;
+	top: 20px;
+	left: 20px;
+}
+#icons a {
+    display: table;
+    cursor: pointer;
+    padding: 2px 10px;
+    text-align: center;
+    transition: 0.11s;
+    margin-top: 5px;
+}
+#icons a:hover {
+    background: #00000050;
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
+    color: #FFF;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+#icons img {
+    padding: 2px;
+}
+#watermark {
+    position: absolute;
+    display: none;
+    bottom: 50px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
+/*Demo styles BEGIN*/
+#window0 {	top: 35px;	left: 240px;}
+#window1 {	top: 400px; left: 120px;}
+#window2 {	top: 250px; left: 300px;}
+#window3 {	top: 125px; left: 420px;}
+#window4 {	top: 35px;	left: 240px;}
+#window5 {	top: 35px;	left: 240px;}
+#window6 {	top: 35px;	left: 240px;}
+#window7 {	top: 35px;	left: 110px;}
+
+
+#window0 .wincontent {	width: 660px; height: 400px;	}
+#window1 .wincontent {	width: 500px; height: 300px;	}
+#window2 .wincontent {	width: 282px; height: 350px;	}
+#window3 .wincontent {	width: 450px; height: 450px;	}
+#window4 .wincontent {	width: 255px; height: 248px;	}
+#window5 .wincontent {	width: 640px; height: 480px;	}
+#window6 .wincontent {	width: 830px; height: 635px;	}
+#window7 .wincontent {	width: 376px; height: 356px;	}
+
+
+
+
+@media screen and (max-width:960px){
+	#window0 {	left: 10px;	}
+	#window3 {	left: 50px;	}	
+}
+@media screen and (max-width:770px){
+	#window0 .wincontent {	width: 460px;	}
+	#window2 {	left: 100px;	}
+	#window1 {	top: 190px;	left: -5px;	}
+}
+@media screen and (max-width:540px){
+#window0 .wincontent {	width: 230px; height: 200px;	}
+#window3 .wincontent {
+    width: 275px;
+    height: auto;
+}
+#window3 {    top: 9px;    left: 10px;	}
+#window2 {    left: -118px;	}
+#window1 .wincontent {    width: auto;    height: 300px;	}
+}
